@@ -27,7 +27,7 @@ def _extract_integers(expr: str) -> list[int]:
 
 
 def _validate_integers(integers: list[int]) -> None:
-    # negatives = [str(i) for i in integers if i < 0]
-    # if negatives:
-    #     raise ValueError(f"negatives not allowed: {' '.join(negatives)}")
+    negatives = [str(i) for i in integers if i < 0]
+    if negatives:
+        raise ValueError(f"negatives not allowed: {' '.join(negatives)}")
     return
